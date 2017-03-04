@@ -16,6 +16,13 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2'
+gem 'pg', '~> 0.19.0'
+gem 'sdoc', '~> 0.4.2'
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+gem 'gritter', '~> 1.2'
+gem 'administrate', '~> 0.3.0'
+gem 'bourbon', '~> 4.3', '>= 4.3.3'
+gem 'pundit', '~> 1.1'
 
 
 group :development, :test do
@@ -23,10 +30,12 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
   gem 'capybara', '~> 2.12', '>= 2.12.1'
   gem 'database_cleaner', '~> 1.5', '>= 1.5.3'
+  gem 'factory_girl_rails', '~> 4.8'
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'spring', '~> 2.0', '>= 2.0.1'
 end
 
 
