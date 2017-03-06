@@ -7,12 +7,25 @@ namespace :notification do
     # 4. Send a message that has instructions and a link to log time
     # User.all.;each do |user|
     #  SmsTool.send_sms()
-    # end 
+    # end
     # number: #555-555-3323
     # number: #55555553323
     # No spaces of dashes
     # exactly 10 characters
     # all characters have to be a number
   end
+
+  desc "Sends mail notification to managers (admin users) each day to infrom of pending overtime requests"
+  task manager_email: :enviroment do
+    submitterd_post = Post.submitted
+    admin_users = AdminUser.all
+
+    if submitted_posts.count > 0
+      admin_users.each do |admin|
+        ManagerMailer.email(admin).deliver_now
+      end
+    end
+  end
+
 
 end
